@@ -31,7 +31,8 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': 'HLaP._HPt"TZScOX[,tv{NRu:7.>I,4b5~1,B!2OdgukCdZz;>l_u"c&vSD?$M74'
+	'cookie secret': 'HLaP._HPt"TZScOX[,tv{NRu:7.>I,4b5~1,B!2OdgukCdZz;>l_u"c&vSD?$M74',
+	'session store' : 'connect-mongo'
 
 });
 
