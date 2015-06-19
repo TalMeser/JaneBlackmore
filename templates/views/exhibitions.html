@@ -1,0 +1,31 @@
+{% extends "templates/layouts/default.html" %}
+
+{% block intro %}
+	<div class="container">
+		<h1>Exhibitions</h1>
+	</div>
+{% endblock %}
+
+{% block content %}
+<div class="w-section section gallery" id="photos">
+    <div class="w-container">
+			{% for exhibition in exhibitions %}
+      <div class="w-row">
+        <div class="w-col w-col-4">
+         <img class="thumbnail" src="{{ exhibition.image.url }}" width="233">
+        </div>
+        <div class="w-col w-col-8">
+          <h4 class="exhibit">{{ exhibition.title }}</h4>
+          <h5><em>{{ exhibition.subtitle }}</em></h5>
+          <p>{{ exhibition.description }}</p>
+        </div>
+      </div>
+
+			{% endfor %}
+
+    </div>
+    <div class="viewmoredic">
+      <div class="viewmore">More..</div>
+    </div>
+  </div>
+{% endblock %}

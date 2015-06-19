@@ -1,0 +1,911 @@
+body {
+  font-family: Roboto, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+h1 {
+  display: block;
+  margin: 25px auto 10px;
+  background-color: transparent;
+  font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+  color: white;
+  font-size: 38px;
+  line-height: 37px;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 10px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 300;
+  text-align: left;
+}
+h3 {
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+p {
+  margin-bottom: 15px;
+  color: #9ea8a4;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: left;
+}
+.button {
+  display: block;
+  width: 117px;
+  margin-right: 0px;
+  margin-left: 13px;
+  padding: 7px 26px 7px 20px;
+  float: left;
+  background-color: white;
+  -webkit-transition: background-color 500ms ease;
+  transition: background-color 500ms ease;
+  font-family:'PT Sans', sans-serif;
+  color: #262626;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #f0f0f0;
+}
+.button.view {
+  display: block;
+  width: 145px;
+  margin-right: auto;
+  margin-left: auto;
+  float: left;
+}
+.button.signup {
+  display: block;
+  width: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  clear: left;
+}
+.button.message {
+  margin-left: 0px;
+  float: left;
+}
+.header {
+  max-height: 800px;
+  min-height: 610px;
+  padding-top: 45px;
+  padding-bottom: 0px;
+  background-image: none;
+  background-size: auto;
+  background-attachment: scroll;
+  box-shadow: black 0px 3px 0px 0px inset;
+}
+.header.sub-page {
+  background-image: url('../images/profile-dude-blue.jpg');
+  background-position: 50% 100%;
+}
+.section {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.section.grey {
+  background-color: #f0f0f0;
+}
+.section.green {
+  background-color: #f2f7f6;
+}
+.section.footer {
+  display: block;
+  max-height: 0px;
+}
+.section.map {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.section.gallery {
+  padding-top: 65px;
+}
+.section.dark {
+  margin-top: 0px;
+  padding-top: 70px;
+  background-color: #f7f7f7;
+}
+.section.scroller {
+  position: static;
+  z-index: 0;
+  height: 200px;
+  background-image: url('../images/photo (5).JPG'), -webkit-linear-gradient(black, white);
+  background-image: url('../images/photo (5).JPG'), linear-gradient(black, white);
+  background-size: cover, auto;
+  background-attachment: fixed, scroll;
+  -webkit-transition: top 500ms ease;
+  transition: top 500ms ease;
+}
+.section.short {
+  height: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.section.no-margin {
+  padding-bottom: 0px;
+}
+.section.about {
+  padding-top: 70px;
+  padding-bottom: 0px;
+}
+.nav-link {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 30px;
+  float: right;
+  clear: none;
+  font-family: Lato, sans-serif;
+  color: #4a4a4a;
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.nav-link:hover {
+  color: #166bcc;
+}
+.nav-link.w--current {
+  color: #030303;
+}
+.nav-link.gallery-link {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 12px;
+  padding-top: 0px;
+  padding-left: 0px;
+  float: none;
+  clear: none;
+  color: #545454;
+  font-style: italic;
+  text-align: center;
+}
+.navigation {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  display: block;
+  overflow-x: visible;
+  overflow-y: visible;
+  max-height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 19px;
+  float: none;
+  clear: left;
+  border-top: 3px none #1e4d3a;
+  background-color: white;
+  box-shadow: none;
+  text-align: left;
+}
+.navigation.gallery-nav {
+  display: block;
+  border-top-width: 0px;
+}
+.logo {
+  display: inline-block;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  margin-left: 30px;
+  float: left;
+  font-family:'Droid Sans', sans-serif;
+  color: #4a4a4a;
+  font-size: 18px;
+  line-height: 36px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: right;
+  text-transform: capitalize;
+}
+.align-right {
+  padding-right: 0px;
+  padding-left: 0px;
+  text-align: right;
+}
+.image {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  text-align: left;
+}
+.thumbnail {
+  display: block;
+  margin: 13px auto;
+  padding: 7px;
+  float: none;
+  background-color: white;
+  box-shadow: none;
+}
+.journal-entry {
+  display: block;
+  margin-bottom: 19px;
+  padding: 18px 20px;
+  border: 1px solid #dce6e4;
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+  color: #333;
+  text-decoration: none;
+}
+.journal-entry:hover {
+  background-color: #f2f7f6;
+}
+.logo-link {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  color: #333;
+  text-decoration: none;
+}
+.logo-link.w--current {
+  float: left;
+}
+.field {
+  display: block;
+  width: 75%;
+  height: 53px;
+  margin-right: auto;
+  margin-left: auto;
+  float: left;
+  clear: left;
+  border: 1px solid #d1e6dd;
+  box-shadow: transparent 0px 1px 0px 0px inset;
+}
+.field:focus {
+  border-color: #24c786;
+  box-shadow: transparent 0px 0px 8px 0px inset;
+}
+.field.comments {
+  height: 101px;
+}
+.field.contact {
+  width: 100%;
+  height: 53px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.field.updates {
+  display: block;
+  width: 75%;
+  height: 30px;
+  float: left;
+  clear: left;
+}
+.success {
+  padding: 47px;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+.header_slider {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  height: 600px;
+  padding-top: 0px;
+  padding-bottom: 45px;
+}
+.slider_slide {
+  height: 530px;
+}
+.slider_slide1 {
+  background-color: white;
+  background-image: url('../images/ever+changing+land.jpg');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+.slider_slide2 {
+  background-color: white;
+  background-image: url('../images/2+whispering+blue+hope-medium.jpg');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.slider_buttons {
+  margin-bottom: 40px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.social {
+  font-family: Montserrat, sans-serif;
+}
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+  font-family:'Open Sans', sans-serif;
+  font-size: 20px;
+  text-align: left;
+}
+.center.dark {
+  background-color: #3b3b3b;
+}
+.art {
+  position: static;
+  display: block;
+  overflow-x: visible;
+  overflow-y: visible;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  clear: none;
+  text-align: left;
+}
+.copyright {
+  margin-right: 20px;
+  float: right;
+  font-size: 10px;
+}
+.hero {
+  display: block;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 7px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.hero.main {
+  width: 38%;
+}
+.gallery-links {
+  position: fixed;
+  top: 40px;
+  right: 0px;
+  display: block;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  background-color: white;
+}
+.nav-container {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.gallery-nav {
+  position: absolute;
+  left: 0px;
+  top: 45px;
+  right: 0px;
+  z-index: 10;
+  width: 100%;
+}
+.gallery-row {
+  margin-top: 40px;
+}
+.viewmore {
+  margin-top: 20px;
+  text-align: center;
+}
+.button-div {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.thumbnail-link {
+  display: block;
+}
+.contact_gallery {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.scolldown {
+  display: block;
+  width: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.scrolldownlink {
+  display: inline;
+}
+.scrolldownlink._2 {
+  margin-top: 0px;
+  padding-top: 20px;
+}
+.down_container {
+  margin-top: 30px;
+}
+.janeimage {
+  max-width: 95%;
+  float: left;
+}
+.gallery-image {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: none;
+}
+.gallery-nav-block {
+  position: static;
+  display: block;
+  float: none;
+}
+.content_about {
+  margin-top: 20px;
+}
+.hero-padding {
+  padding-top:190px;
+}
+.piece_content {
+  position: static;
+  top: 0px;
+  right: 0px;
+  margin-top: 340px;
+  margin-left: -80px;
+  padding-left: 0px;
+  float: left;
+  clear: none;
+}
+.piece_content_short {
+  position: static;
+  top: 0px;
+  right: 0px;
+  margin-top: 10px;
+  margin-left: -80px;
+  padding-left: 0px;
+  float: left;
+  clear: none;
+}
+.info {
+  text-align: right;
+}
+.info-list {
+  padding-left: 10px;
+  list-style-type: none;
+}
+.info-list-item {
+  padding-bottom: 10px;
+  float: none;
+  text-align: left;
+}
+.info-list-item-2 {
+  padding-top: 0px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.info-list-main {
+  margin-top: 20px;
+}
+.form {
+  text-align: center;
+}
+.map_text {
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+.piece_info {
+  margin-bottom: 20px;
+}
+.update-form {
+  display: inline-block;
+  margin-top: 15px;
+}
+.piece_info_bit {
+  font-size: 12px;
+}
+.piece_title {
+  margin-top: 10px;
+}
+.form-gallery {
+  margin-top: 40px;
+}
+.message-field {
+  width: 100%;
+}
+.tabs-contact {
+  margin-top: 40px;
+}
+.contact-p {
+  margin-top: 60px;
+}
+.contact-tabs {
+  float: right;
+}
+.contact-details {
+  margin-top: 40px;
+}
+.map-contact {
+  height: 493px;
+}
+.exhibit {
+  margin-top: 20px;
+}
+.facebook {
+  width: 20px;
+  margin-top: 10px;
+  float: right;
+  border-radius: 2px;
+  background-color: #3b5998;
+}
+.social-link {
+  margin-right: 0px;
+  margin-left: 15px;
+  float: right;
+}
+@media (max-width: 991px) {
+  h1 {
+    margin-top: 15px;
+  }
+  .button {
+    display: block;
+    width: 117px;
+    margin-left: 0px;
+    float: left;
+    clear: none;
+  }
+  .button.view {
+    position: static;
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 112px;
+    padding-right: 20px;
+    float: left;
+    clear: none;
+  }
+  .header {
+    min-height: 500px;
+  }
+  .section {
+    padding-top: 65px;
+  }
+  .section.gallery {
+    margin-top: 0px;
+  }
+  .nav-link {
+    margin-top: 12px;
+    font-family: Lato, sans-serif;
+    font-style: normal;
+  }
+  .navigation {
+    max-height: 45px;
+    border-top: 3px none white;
+    background-color: white;
+  }
+  .logo {
+    margin-top: 7px;
+    margin-left: 10px;
+    font-family:'Droid Sans', sans-serif;
+    color: #4a4a4a;
+    font-size: 18px;
+  }
+  .align-right {
+    height: 0px;
+    padding-right: 10px;
+  }
+  .thumbnail {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: none;
+  }
+  .art {
+    margin-top: 30px;
+  }
+  .hero {
+    width: 45%;
+  }
+  .gallery-links {
+    position: fixed;
+    top: 45px;
+    display: block;
+    background-color: white;
+    text-align: left;
+  }
+  .viewmore {
+    position: static;
+    display: inline-block;
+    overflow-x: visible;
+    overflow-y: visible;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    clear: none;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+  }
+  .viewmoredic {
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    clear: none;
+  }
+  .down_container {
+    margin-top: 50px;
+  }
+  .janeimage {
+    margin-top: 50px;
+  }
+  .gallery-image {
+    margin-top: 50px;
+  }
+  .hero-padding {
+    padding-top:50px;
+  }
+  .piece_content {
+    margin-top: 0px;
+    margin-left: 0px;
+    float: none;
+    text-align: center;
+  }
+  .piece_content_short {
+    margin-top: 0px;
+    margin-left: 0px;
+    float: none;
+    text-align: center;
+  } 
+}
+@media (max-width: 767px) {
+  h1 {
+    margin-top: 40px;
+    font-size: 28px;
+  }
+  .header {
+    height: auto;
+    min-height: 400px;
+    background-attachment: scroll;
+    box-shadow: none;
+  }
+  .section {
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+  .section.gallery {
+    margin-top: 0px;
+    padding-top: 50px;
+  }
+  .section.scroller {
+    height: 180px;
+  }
+  .navigation {
+    position: fixed;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px;
+  }
+  .logo.phone {
+    margin-left: 10px;
+  }
+  .align-right {
+    display: block;
+    padding-left: 10px;
+    text-align: left;
+  }
+  .image {
+    display: block;
+  }
+  .thumbnail {
+    width: 80%;
+    margin-top: 13px;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  .center {
+    font-size: 25px;
+  }
+  .hero {
+    width: 60%;
+  }
+  .hero.main {
+    width: 80%;
+  }
+  .viewmoredic {
+    text-align: center;
+  }
+  .phone_nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 45px;
+  }
+  .menu_button_phone {
+    height: 45px;
+    padding-top: 12px;
+  }
+  .janeimage {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+  .about_content {
+    display: block;
+    margin-top: 50px;
+  }
+  .nav-menu-phone-main {
+    height: 45px;
+    background-color: white;
+  }
+  .nav-menu-phone-icon {
+    background-color: transparent;
+    color: black;
+  }
+}
+@media (max-width: 479px) {
+  h1 {
+    font-size: 15px;
+  }
+  .header {
+    min-height: 200px;
+    margin-top: 30px;
+    padding-top: 0px;
+    box-shadow: none;
+  }
+  .section {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .section.gallery {
+    margin-top: 0px;
+  }
+  .section.scroller {
+    height: 150px;
+  }
+  .nav-link {
+    margin: 6px 10px 6px 25px;
+  }
+  .nav-link.w--current {
+    margin-bottom: 12px;
+  }
+  .nav-link.nav-link-phone {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    float: right;
+    clear: right;
+  }
+  .navigation {
+    float: none;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px;
+  }
+  .logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+  }
+  .logo.phone {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #4a4a4a;
+  }
+  .logo-link {
+    display: block;
+  }
+  .logo-link.w--current {
+    display: block;
+    float: none;
+  }
+  .hero {
+    width: 90%;
+  }
+  .hero.main {
+    width: 90%;
+  }
+  .gallery-links {
+    z-index: 8;
+  }
+  .gallery-nav {
+    position: fixed;
+    top: 80px;
+    z-index: 8;
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+  .phone_nav {
+    height: 50px;
+    background-color: white;
+    color: white;
+  }
+  .menu_button_phone {
+    left: 0px;
+    top: 0px;
+    padding-top: 15px;
+    padding-bottom: 9px;
+    clear: right;
+  }
+  .menu_button_phone.w--open {
+    height: 50px;
+    float: right;
+    clear: none;
+    background-color: white;
+  }
+  .nav-menu-phone {
+    position: fixed;
+    top: 40px;
+    right: 0px;
+    z-index: 9;
+    display: block;
+    width: 10%;
+    min-width: 100px;
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-left: auto;
+    float: right;
+    clear: none;
+    background-color: white;
+  }
+  .nav-menu-phone.main-nav {
+    border-bottom-color: #333;
+    background-color: #333;
+  }
+  .main-nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+  }
+  .dropdown-icon {
+    color: white;
+  }
+  .nav-menu-phone-main {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+  }
+  .nav-menu-phone-icon {
+    color: black;
+  }
+  .content_about {
+    margin-top: 0px;
+  }
+  .awardwin {
+    margin-top: 60px;
+    padding-top: 50px;
+  }
+}
+

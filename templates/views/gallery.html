@@ -1,0 +1,26 @@
+{% extends "templates/layouts/default.html" %}
+
+{% block intro %}
+	<div class="container">
+		<h1>Gallery</h1>
+	</div>
+{% endblock %}
+
+{% block content %}
+  <div class="w-section section gallery" id="photos">
+    <div class="w-container">
+      <div class="w-row">
+			{% for piece in data.pieces %}
+        <div class="w-col {% if piece.image.height < (piece.image.width / 2) %}w-col-8{% else %}w-col-4{% endif %}">
+          <a class="w-inline-block thumbnail-link" href="/gallery/{{ piece.slug }}"><img class="thumbnail" src="{% if piece.image.height < (piece.image.width / 2) %}{{ piece.image.url }}{% else %}{{ piece.image.url }}{% endif %}" width="{% if piece.image.height < (piece.image.width / 2) %}550{% else %}233{% endif %}" {% if piece.image.height < (piece.image.width / 2) %}style="margin-top:30px;"{% endif %}>
+          </a>
+        </div>
+			{% endfor %}
+      </div>
+    </div>
+    <div class="viewmoredic">
+      <div class="viewmore">More..</div>
+    </div>
+  </div>
+
+{% endblock %}

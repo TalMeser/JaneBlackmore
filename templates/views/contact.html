@@ -1,0 +1,72 @@
+{% extends "templates/layouts/default.html" %}
+
+{% block intro %}
+	<div class="container">
+		<h1>Contact Us</h1>
+	</div>
+{% endblock %}
+
+{% block content %}
+   <div class="w-section section map" id="contact">
+    <div class="w-container content_about">
+      <div class="w-row contact-wrapper">
+        <div class="w-col w-col-6">
+          <div class="w-tabs tabs-contact" data-duration-in="300" data-duration-out="100">
+            <div class="w-tab-content">
+              <div class="w-tab-pane contact-tabs-pane" data-w-tab="Tab 1"><img class="gallery-image" src="images/photo 3-2.JPG">
+              </div>
+              <div class="w-tab-pane w--tab-active" data-w-tab="Tab 2">
+                <div class="w-widget w-widget-map map-contact" id="map" data-widget-latlng="-41.2935,174.821985" data-widget-style="hybrid" data-widget-zoom="15" data-disable-scroll="1" data-disable-touch="1" data-widget-tooltip="Blackmore &amp; Best Gallery"></div>
+              </div>
+            </div>
+            <div class="w-tab-menu contact-tabs">
+              <a class="w-tab-link w-inline-block" data-w-tab="Tab 1">
+                <div>Gallery</div>
+              </a>
+              <a class="w-tab-link w--current w-inline-block" data-w-tab="Tab 2">
+                <div>Map</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <h2 class="contact-details">Contact Details</h2>
+          <div class="w-row info-list-main">
+            <div class="w-col w-col-4">
+              <ul class="info-list">
+                <li class="info-list-item">Gallery:</li>
+                <li class="info-list-item">Mobile:</li>
+                <li class="info-list-item">Email:</li>
+                <li class="info-list-item">Gallery &amp;&nbsp;Studio:</li>
+              </ul>
+            </div>
+            <div class="w-col w-col-8">
+              <ul class="info-list">
+                <li class="info-list-item-2">04 388 2357</li>
+                <li class="info-list-item-2">021&nbsp;2988 743</li>
+                <li class="info-list-item-2">info@janeblackmore.com</li>
+                <li class="info-list-item-2">Combined Officers Mess, Massey Road, Shelly Bay, Wellington</li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-form form-gallery">
+            <form class="w-clearfix" name="email-form" data-name="Email Form">
+              <h2>Message Jane</h2>
+              <input class="w-input message-field" type="text" placeholder="Name" name="name" data-name="Name">
+              <input class="w-input message-field" type="email" placeholder="Email" name="email" data-name="Email" required="required">
+              <textarea class="w-input message-field" id="Message-2" placeholder="Message" name="Message" required="required" data-name="Message"></textarea>
+              <input class="w-button button message" type="submit" value="Send" data-wait="Please wait...">
+            </form>
+            <div class="w-form-done success">
+              <h2>Thank you!</h2>
+              <p class="form">I’ll be in contact soon,</p>
+            </div>
+            <div class="w-form-fail">
+              <p>Oops! Something went wrong while submitting the form :(</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

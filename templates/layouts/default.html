@@ -1,0 +1,112 @@
+{% import "templates/mixins/flash-messages.html" as FM %}
+
+<!doctype html>
+<html data-wf-site="55529fd6a11310f93234b531" data-wf-page="557d21f64f2d781a55f37b7e">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title|default(projectName) }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="/css/janeblackmore.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Great Vibes:400","PT Sans:400,400italic,700,700italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Droid Sans:400,700","Montserrat:400,700","Roboto:300,regular,500","Roboto Condensed:300,regular"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+	{% if user and user.canAccessKeystone %}
+	<link href="/keystone/styles/content/editor.min.css" rel="stylesheet">
+{% endif %}
+
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+		{# HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		   Safely remove this block if you are not targeting IE8 #}
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		{# Include template-specific stylesheets by extending the css block #}
+		{% block css %}{% endblock %}
+
+		{# Add any other template-specific HEAD tags by extending the head block #}
+		{% block head %}{% endblock %}
+
+	</head>
+	<body>
+
+		{# HEADER #}
+
+			{# Customise your site"s navigation by changing the navLinks Array in ./routes/middleware.js
+			   ... or completely change this header to suit your design. #}
+			     <div class="w-hidden-small w-hidden-tiny w-clearfix navigation"><a class="w-clearfix w-inline-block logo-link" href="/"><h1 class="logo">Jane Blackmore</h1></a><img class="facebook" src="images/52af8da8aed63fb914000010_facebook-icon.png">{% for link in navLinks %}<a class="nav-link" href="{{ link.href }}">{{ link.label }}</a>{% endfor %}{% if user %}
+								{% if user.canAccessKeystone %}
+								<a class="nav-link" href="/keystone">Open Keystone</a>
+								{% endif %}
+								<a class="nav-link" href="/keystone/signout">Sign Out</a>
+							{% endif %}
+  </div>
+  <div class="w-nav w-hidden-main w-hidden-medium phone_nav" data-collapse="small" data-animation="default" data-duration="400" data-contain="1">
+    <div class="w-container w-hidden-main w-hidden-medium nav-menu-phone-main"><a class="w-nav-brand w-clearfix" href="/"><h1 class="logo phone">Jane Blackmore</h1></a>
+      <nav class="w-nav-menu nav-menu-phone" role="navigation"><img class="facebook" src="images/52af8da8aed63fb914000010_facebook-icon.png">{% for link in navLinksMobile %}<a class="nav-link" href="{{ link.href }}">{{ link.label }}</a>{% endfor %}{% if user %}
+								{% if user.canAccessKeystone %}
+								<a class="nav-link" href="/keystone">Open Keystone</a>
+								{% endif %}
+								<a class="nav-link" href="/keystone/signout">Sign Out</a>
+							{% endif %}
+      </nav>
+      <div class="w-nav-button menu_button_phone">
+        <div class="w-icon-nav-menu nav-menu-phone-icon"></div>
+      </div>
+    </div>
+  </div>							
+			
+		{# BODY #}
+			{# NOTE:
+			   There is no .container wrapping class around body blocks to allow more flexibility in design.
+			   Remember to include it in your templates when you override the intro and content blocks! #}
+
+			{# The Intro block appears above flash messages (used for temporary information display) #}
+			{% block intro %}{% endblock %}
+
+			{# Flash messages allow you to display once-off status messages to users, e.g. form
+			   validation errors, success messages, etc. #}
+			{{ FM.flashMessages(messages) }}
+
+			{# The content block should contain the body of your template"s content #}
+			{% block content %}{% endblock %}
+
+
+
+		{# FOOTER #}
+		{% block copyright %}
+		  <div class="w-container">
+		    <div class="copyright">Created with &hearts; by <a href="http://www.hydroweb.co.nz">HydroWeb</a></div>
+		    <div class="copyright">(C)&nbsp;Jane Blackmore 2015</div>
+		  </div>
+		{% endblock %}
+
+		{# JAVASCRIPT #}
+
+
+		  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		  <script type="text/javascript" src="/js/webflow.js"></script>
+		  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+
+		{# The KeystoneJS Content Editor provides support for ks-editable data attributes,
+			which generate links to edit content for users who can access Keystone #}
+		{% if user and user.canAccessKeystone %}
+			<script src="/keystone/js/content/editor.js"></script>
+		{% endif %}
+
+		{# Add scripts that are globally required by your site here. #}
+
+		{# Include template-specific javascript files by extending the js block #}
+		{% block js %}{% endblock %}
+	</body>
+</html>

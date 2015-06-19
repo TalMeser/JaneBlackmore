@@ -1,0 +1,70 @@
+{% extends "templates/layouts/default.html" %}
+
+{% block content %}
+<div class="w-section header" id="header">
+    <div class="w-row{% if piece.image.height < piece.image.width / 2 %} hero-padding{% endif %}">
+      <div class="w-col w-col-3 w-col-stack align-right"></div>
+      <div class="w-col w-col-6 w-col-stack">
+        <div class="art">
+          <a class="w-lightbox w-inline-block" href="#"><img class="hero" src="{{ piece.image.url }}" width="600">
+            <script type="application/json" class="w-json">
+              { "items": [{
+                "url": "{{ piece.image.url }}",
+                "fileName": "5000_{{ piece.image.public_id}}.{{ piece.image.format }}",
+                "origFileName": "{{ piece.image.public_id}}.{{ piece.image.format }}",
+                "width": {{ piece.image.width }},
+                "height": {{ piece.image.height }},
+                "size": 470954,
+                "type": "image"
+              }] }
+            </script>
+          </a>
+        </div>
+      </div>
+      <div class="w-col w-col-3 w-col-stack">
+        <div class="{% if piece.image.height < piece.image.width / 2 %}piece_content_short{% else %}piece_content{% endif %}"><a href="/gallery/{{ data.previous.slug }}"><img src="/images/left.png" width="28"></a>
+          <a class="w-inline-block" href="/gallery"><img src="/images/center2.jpg" width="30">
+          </a><a href="/gallery/{{ data.next.slug }}"><img src="/images/right.png" width="28"></a>
+          <h4 class="piece_title">{{ piece.title }}</h4>
+          <div class="piece_info">
+            <div class="piece_info_bit">{{ piece.size }}</div>
+            <div class="piece_info_bit">{{ piece.material }}</div>
+            <div class="piece_info_bit">${{ piece.price }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block scrolldownlink" href="#photos"><img class="scolldown" src="/images/basics-08-128.png">
+    </a>
+  </div>
+  <div class="w-section w-hidden-tiny section short" id="photos"></div>
+  <div class="w-section section scroller">
+    <h1 class="awardwin">Award winning New Zealand artist</h1>
+  </div>
+  <div class="w-section section" id="signup">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-3"><img src="/images/Otherworldly.jpg">
+        </div>
+        <div class="w-col w-col-7">
+          <div class="w-form">
+            <form class="w-clearfix" name="email-form" data-name="Email Form">
+              <h2>Sign up for updates</h2>
+              <input class="w-input field" type="text" placeholder="Name" name="name" data-name="Name">
+              <input class="w-input field" type="email" placeholder="Email" name="email" data-name="Email" required="required">
+              <input class="w-button button signup" type="submit" value="Sign up" data-wait="Please wait...">
+            </form>
+            <div class="w-form-done success">
+              <h2>Thank you!</h2>
+              <p>Your submission has been received!</p>
+            </div>
+            <div class="w-form-fail">
+              <p>Oops! Something went wrong while submitting the form :(</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
