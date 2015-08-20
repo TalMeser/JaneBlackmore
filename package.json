@@ -10,7 +10,6 @@
     "nunjucks": "^1.0.5", 
     "dotenv": "0.4.0",
     "connect-mongo": "0.4.1",
-    "forever": "0.14.1",
     "mailchimp-api": "2.0.7"
   },
   "devDependencies": {
