@@ -1,1 +1,1 @@
-web: node keystone.js
+web: forever start keystone.js
