@@ -9,7 +9,8 @@
     "consolidate": "^0.10.0", 
     "nunjucks": "^1.0.5", 
     "dotenv": "0.4.0",
-    "connect-mongo": "0.4.1"
+    "connect-mongo": "0.4.1",
+    "mailchimp-api": "2.0.7"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
